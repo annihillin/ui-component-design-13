@@ -17,7 +17,7 @@ const allFeature = document.querySelector('.header li:nth-child(1)');
 const recentUpdate = document.querySelector('.header li:nth-child(2)');
 const yearsList = document.querySelectorAll('.category-by-years li');
 
-let menuSelect = 'feature';
+let menuSelect = 'update';
 let yearSelect = 2020;
 
 allFeature.addEventListener('click', () => {
@@ -101,6 +101,6 @@ async function displayPost(element=false, year=false, tag=false) {
 
 document.addEventListener('readystatechange', event => { 
    if (event.target.readyState === "complete") {
-      displayPost('feature');
+      displayPost('update');
    }
 });
