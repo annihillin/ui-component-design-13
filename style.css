@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Rubik:wght@500&display=swap');
 
 * {
    box-sizing: border-box;
@@ -100,7 +99,7 @@ body {
    background-color: #e9f0ff;
 }
 .post h2 {
-   font-family: 'Roboto', sans-serif;
+   font-family: 'Rubik', sans-serif;
    padding: 18px 0 24px;
 }
 .post p {
