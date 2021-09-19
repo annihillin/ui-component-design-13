@@ -99,11 +99,13 @@ body {
    background-color: #e9f0ff;
 }
 .post h2 {
+   color: #292929;
    font-family: 'Rubik', sans-serif;
-   padding: 18px 0 24px;
+   padding: 18px 0 20px;
 }
 .post p {
-   padding-bottom: 5px;
+   color: #222;
+   padding-bottom: 8px;
    font-size: .9em;
    line-height: 1.4em;
 }

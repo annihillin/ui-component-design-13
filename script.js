@@ -64,6 +64,10 @@ function randomArr(len=false) {
       return Math.round(Math.random());
    }
 }
+function ucfirst(str) {
+   return str.charAt(0).toUpperCase() + str.slice(1)
+}
+console.log(ucfirst('hello world'));
 async function displayPost(element=false, year=false, tag=false) {
    let posts = await allPosts;
 
@@ -91,8 +95,8 @@ async function displayPost(element=false, year=false, tag=false) {
                <span class="feature tag" onclick="displayPost(false,false,'${post.feature}')">${post.feature}</span>
                ${post.update ? `<span class="update tag">update</span>` : ''}
                <span>${dateFormat(post.date)}</span>
-               <h2>${post.title}</h2>
-               <p>${post.body}</p>
+               <h2>${ucfirst(post.title)}</h2>
+               <p>${ucfirst(post.body)}</p>
             </div>
          `
       )
