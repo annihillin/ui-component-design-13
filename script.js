@@ -1,13 +1,17 @@
 const category = ['History', 'Lifestyle', 'Culture', 'Adventure'];
 
 async function data() {
-   let posts = await (await fetch('https://jsonplaceholder.typicode.com/posts')).json();
-   return posts.map(i => {
-      i.date = randomDate();
-      i.feature = category[randomArr(category.length)];
-      i.update = randomArr();
-      return i;
-   })
+   try {
+      let posts = await (await fetch('https://jsonplaceholder.typicode.com/pots')).json();
+      return posts.map(i => {
+         i.date = randomDate();
+         i.feature = category[randomArr(category.length)];
+         i.update = randomArr();
+         return i;
+      })
+   } catch (err) {
+      return false;
+   }
 }
 const allPosts = data();
 // ------------------------------------
@@ -69,7 +73,12 @@ function ucfirst(str) {
 }
 async function displayPost(element=false, year=false, tag=false) {
    let posts = await allPosts;
-   posts ? console.log('it is true') : console.log('it is false');
+
+   if (!posts) {
+      display.innerHTML = `
+         404 Error: resource not found
+      `
+   }
 
    // desc sort by date
    posts.sort((a,b) => b.date - a.date);
@@ -101,6 +110,7 @@ async function displayPost(element=false, year=false, tag=false) {
          `
       )
    }).join('');
+
 }
 
 document.addEventListener('readystatechange', event => { 
