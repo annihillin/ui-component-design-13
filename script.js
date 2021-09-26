@@ -76,8 +76,9 @@ async function displayPost(element=false, year=false, tag=false) {
 
    if (!posts) {
       display.innerHTML = `
-         <span class="init">404 Error: resource not found</span>
+         404 Error: resource not found
       `
+      return;
    }
 
    // desc sort by date
