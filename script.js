@@ -2,7 +2,7 @@ const category = ['History', 'Lifestyle', 'Culture', 'Adventure'];
 
 async function data() {
    try {
-      let posts = await (await fetch('https://jsonplaceholder.typicode.com/pots')).json();
+      let posts = await (await fetch('https://jsonplaceholder.typicode.com/posts')).json();
       return posts.map(i => {
          i.date = randomDate();
          i.feature = category[randomArr(category.length)];
