@@ -10,6 +10,7 @@ async function data() {
          return i;
       })
    } catch (err) {
+      console.log(err.message);
       return false;
    }
 }
