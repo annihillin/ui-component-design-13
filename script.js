@@ -67,9 +67,9 @@ function randomArr(len=false) {
 function ucfirst(str) {
    return str.charAt(0).toUpperCase() + str.slice(1)
 }
-console.log(ucfirst('hello world'));
 async function displayPost(element=false, year=false, tag=false) {
    let posts = await allPosts;
+   posts ? console.log('it is true') : console.log('it is false');
 
    // desc sort by date
    posts.sort((a,b) => b.date - a.date);
