@@ -76,7 +76,7 @@ async function displayPost(element=false, year=false, tag=false) {
 
    if (!posts) {
       display.innerHTML = `
-         404 Error: resource not found
+         <span class="init">404 Error: resource not found</span>
       `
    }
 
